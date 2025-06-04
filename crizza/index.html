@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crizza's 18th Birthday Celebration</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌹</text></svg>">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Draggable.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Main invitation card (front) -->
+        <div class="invitation-card">
+            <div class="enchanted-border">
+                <div class="rose-container">
+                    <div class="enchanted-rose"></div>
+                    <div class="rose-glow"></div>
+                </div>
+                
+                <div class="invitation-content">
+                    <h1 class="title">Be Our Guest</h1>
+                    <div class="separator"></div>
+                    <h2 class="subtitle">You are cordially invited to</h2>
+                    
+                    <div class="birthday-info">
+                        <h2 class="celebrant">Crizza's</h2>
+                        <h1 class="celebrant">18th</h1>
+                        <h2 class="event">Birthday Celebration</h2>
+                    </div>
+                    
+                    <div class="date-venue">
+                        <p><i class="fas fa-calendar-alt"></i>date</p>
+                        <p><i class="fas fa-clock"></i> 6:00 PM onwards</p>
+                        <p><i class="fas fa-map-marker-alt"></i> nangaputan</p>
+                        <p><i class="fas fa-tshirt"></i> Dress Code: basketball jersey</p>
+                    </div>
+                    
+                    <div class="tap-instruction">
+                        <p>Tap the rose to reveal more</p>
+                        <i class="fas fa-hand-pointer"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Details panel (revealed after tapping) -->
+        <div class="details-panel hidden">
+            <div class="details-content">
+                <div class="close-button">&times;</div>
+                <h2 class="details-title">A Tale as old as time</h2>
+                
+                <div class="gifts-grid">
+                    <div class="gift-category">
+                        <div class="gift-icon">
+                            <i class="fas fa-spa"></i>
+                            <span>18</span>
+                        </div>
+                        <h3>Roses</h3>
+                        <p>Symbolizing beauty and love from special people in your life</p>
+                        <div class="tap-hint"><i class="fas fa-hand-pointer"></i> Tap to see names</div>
+                    </div>
+                    
+                    <div class="gift-category">
+                        <div class="gift-icon">
+                            <i class="fas fa-birthday-cake"></i>
+                            <span>18</span>
+                        </div>
+                        <h3>Balloons</h3>
+                        <p>Each with a special message from friends and family</p>
+                        <div class="tap-hint"><i class="fas fa-hand-pointer"></i> Tap to see names</div>
+                    </div>
+                    
+                    <div class="gift-category">
+                        <div class="gift-icon">
+                            <i class="fas fa-fire"></i>
+                            <span>18</span>
+                        </div>
+                        <h3>Candles & Wishes</h3>
+                        <p>Blessings for your bright future ahead</p>
+                        <div class="tap-hint"><i class="fas fa-hand-pointer"></i> Tap to see names</div>
+                    </div>
+                    
+                    <div class="gift-category">
+                        <div class="gift-icon">
+                            <i class="fas fa-glass-cheers"></i>
+                            <span>18</span>
+                        </div>
+                        <h3>Shots</h3>
+                        <p>Toasts to celebrate this milestone</p>
+                        <div class="tap-hint"><i class="fas fa-hand-pointer"></i> Tap to see names</div>
+                    </div>
+                    
+                    <div class="gift-category">
+                        <div class="gift-icon">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <span>18</span>
+                        </div>
+                        <h3>Blue Bills</h3>
+                        <p>Gifts to start your journey into adulthood</p>
+                        <div class="tap-hint"><i class="fas fa-hand-pointer"></i> Tap to see names</div>
+                    </div>
+                    
+                    <div class="gift-category">
+                        <div class="gift-icon">
+                            <i class="fas fa-paw"></i>
+                            <span>18</span>
+                        </div>
+                        <h3>Teddy Bears</h3>
+                        <p>Soft friends to keep your childhood memories alive</p>
+                        <div class="tap-hint"><i class="fas fa-hand-pointer"></i> Tap to see names</div>
+                    </div>
+                    
+                    <div class="gift-category">
+                        <div class="gift-icon">
+                            <i class="fas fa-gem"></i>
+                            <span>18</span>
+                        </div>
+                        <h3>Treasures</h3>
+                        <p>Precious gifts to mark this special milestone</p>
+                        <div class="tap-hint"><i class="fas fa-hand-pointer"></i> Tap to see names</div>
+                    </div>
+                </div>
+                
+                <!-- Debutante's Gallery Section -->
+                <div class="gallery-section">
+                    <h2 class="gallery-title">Debutante's Gallery</h2>
+                    
+                    <div class="card-stack-container">
+                        <div class="card-stack" id="card-stack">
+                            <!-- Cards will be inserted here by JavaScript -->
+                        </div>
+                        
+                        <div class="card-rating" id="card-rating">
+                            <div class="star active"><i class="fas fa-star"></i></div>
+                            <div class="star active"><i class="fas fa-star"></i></div>
+                            <div class="star active"><i class="fas fa-star"></i></div>
+                            <div class="star active"><i class="fas fa-star"></i></div>
+                            <div class="star active"><i class="fas fa-star"></i></div>
+                        </div>
+                        
+                        <div class="card-actions">
+                            <div class="drag-instruction">
+                                <svg viewBox="0 0 24 24" width="16" height="16">
+                                    <path d="M13.5091 24.0063C10.7699 23.971 8.15366 22.8634 6.22167 20.9213C6.03942 20.7406 5.88216 20.5364 5.75406 20.314L1.88564 13.6338C1.84853 13.569 1.81995 13.4996 1.80062 13.4274C1.64142 12.893 1.66621 12.3206 1.87102 11.802C2.07583 11.2833 2.4488 10.8485 2.93017 10.567C3.29921 10.353 3.71811 10.2399 4.14475 10.2391V10.2391L0.179159 3.3646C0.141029 3.30022 0.112394 3.23068 0.0941387 3.15812C-0.05595 2.62723 -0.0259149 2.06157 0.179549 1.54956C0.385013 1.03755 0.754327 0.608036 1.22977 0.328161C1.71192 0.0542366 2.27111 -0.0525986 2.82028 0.0242861C3.36946 0.101171 3.87781 0.357462 4.2662 0.753262C4.31781 0.806246 4.36269 0.865397 4.39981 0.929376L7.76418 6.75934C7.97368 6.39282 8.27508 6.08723 8.63867 5.8727C9.07352 5.62113 9.57567 5.51057 10.076 5.55624C10.5763 5.60192 11.0501 5.80159 11.4322 6.12776C11.6456 5.69776 11.9816 5.34063 12.3978 5.10144C12.8357 4.85175 13.3405 4.74449 13.8421 4.79455C14.3438 4.8446 14.8174 5.04948 15.1974 5.38079C15.4098 4.94855 15.7459 4.58921 16.163 4.3484C16.6459 4.07256 17.2073 3.96635 17.7576 4.0467C18.3079 4.12704 18.8155 4.38933 19.1994 4.79172C19.2523 4.84132 19.2973 4.89865 19.333 4.96177L22.5881 10.6035C22.718 10.8241 22.8181 11.061 22.8856 11.3079C24.1002 16.1662 22.1265 20.5448 18.3674 22.7189C16.8889 23.5667 15.2134 24.0107 13.5091 24.0063Z" fill="currentColor"/>
+                                </svg>
+                                <p>Drag to explore</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Gallery Grid for showing all cards -->
+                    <div class="gallery-grid" id="gallery-grid">
+                        <div class="close-gallery" id="close-gallery">&times;</div>
+                        <!-- Gallery items will be inserted here by JavaScript -->
+                    </div>
+                </div>
+                
+                <div class="rsvp-section">
+                    <p>I hope you can make it</p>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> 0999999</p>
+                        <p><i class="fas fa-envelope"></i>davidgwapo@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html> 
